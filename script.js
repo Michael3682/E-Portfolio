@@ -42,23 +42,18 @@ const buttonsHoverAnimation = () => {
 }
 
 const animate2 = () => {
-    gsap.to(".content .img1", {
-        x: -50,
+    gsap.to("#about h1", {
+        transform: "translateX(-55%)",
         scrollTrigger: {
-            trigger: ".landingPage",
+            trigger: "#about",
             scroller: "body",
-            scrub: 3,
-            start: "top 0%",
+            scrub: 1,
+            start: "top 0",
             end: "top -200%",
+            pin: true,
             markers: true
         }
     })
-    // gsap.to(".content .img2", {
-
-    // })
-    // gsap.to(".content .img3", {
-
-    // })
 }
 
 buttonsHoverAnimation()
