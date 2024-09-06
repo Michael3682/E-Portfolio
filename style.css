@@ -1,7 +1,7 @@
 :root {
-    --primary: #fbf7ef;
-    --secondary: #4e342e;
-    --accent: #8b8b83;
+    --primary: #121817;
+    --secondary: #fdca6f;
+    --accent: #8e4d13;
 }
 
 ::-webkit-scrollbar {
@@ -12,99 +12,138 @@
     background-color: var(--secondary);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     overflow-x: hidden;
+    background-color: var(--primary);
     color: var(--secondary);
 }
 
-.landingPage {
-    height: 100vh;
-    width: 100vw;
-    position: relative;
-
-    & nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 15px 35px;
-
-        & h1 {
-            font-size: 35px;
-        }
-
-        & .part2 {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 25px;
-
-            & a {
-                font-size: 20px;
-                font-weight: 500;
-                cursor: pointer;
-                text-decoration: none;
-                color: var(--secondary);
-                border-bottom: 1px solid transparent;
-
-                & span {
-                    padding: 10px;
-                    border-radius: 15px;
-                }
-            }
-
-            & button {
-                padding: 10px;
-                font-size: 20px;
-                border-radius: 15px;
-                cursor: pointer;
-                color: var(--primary);
-                border: 1px solid var(--accent);
-                background-color: var(--secondary);
-            }
-        }
-    }
-
-    .content {
-        display: grid;
-        place-items: center;
-        grid-template-columns: repeat(3, 1fr);
-        height: calc(100% - 120px);
-        width: 100%;
-        gap: 150px;
-
-        & img {
-            height: 300px;
-            width: 250px;
-            display: flex;
-            object-fit: cover;
-        }
-
-        & img:nth-child(2) {
-            height: 400px;
-            width: 300px;
-        }
-    }
-}
-
-#about {
-    height: 100vh;
-    width: 100vw;
-    background-color: aquamarine;
+nav {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    position: sticky;
+    top: 0;
+    background-color: #904d1433;
+    backdrop-filter: blur(5px);
 
     & h1 {
-        font-size: 30vw;
-        padding-left: 5%;
-        text-wrap: nowrap;
+        font-size: 1.7em;
+        margin: 25px;
+        cursor: pointer;
+    }
+
+    & .buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+
+        & a {
+            font-size: 1em;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+            color: var(--secondary);
+            border-bottom: 1px solid transparent;
+
+            & span {
+                padding: 10px;
+                border-radius: 15px;
+            }
+        }
+
+        & button {
+            padding: 10px;
+            font-size: 1em;
+            border-radius: 15px;
+            cursor: pointer;
+            color: var(--primary);
+            border: 1px solid #8f4c1299;
+            background-color: var(--secondary);
+        }
     }
 }
 
-.page3 {
+#main {
     height: 100vh;
     width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
+    & .parts {
+        padding-bottom: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        & h1 {
+            font-size: 4.5em;
+        }
+
+        & #btn2 {
+            padding: 10px;
+            font-size: 1.3em;
+            border-radius: 15px;
+            cursor: pointer;
+            color: var(--primary);
+            border: 1px solid #8f4c1299;
+            background-color: var(--secondary);
+
+            & div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                overflow: hidden;
+            }
+
+            & .icon {
+                overflow: hidden;
+            }
+
+            & i {
+                font-size: 1.5em;
+            }
+        }
+    }
+}
+
+#section1 {
+    height: 100vh;
+    width: 100vw;
+    padding: 60px 30px;
+}
+
+.card {
+    height: 100%;
+    width: 100%;
+
+    & img {
+        width: 300px;
+        object-fit: contain;
+    }
+}
+
+#section2 {
+    height: 100vh;
+    width: 100vw;
+    padding: 60px 30px;
+}
+
+#section3 {
+    height: 100vh;
+    width: 100vw;
+    padding: 60px 30px;
 }
