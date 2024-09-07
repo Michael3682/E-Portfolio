@@ -1,10 +1,81 @@
 const animate1 = () => {
     var tl = gsap.timeline()
 
-    tl.from("nav", { y: -100, duration: .7, delay: .5 })
-    tl.from("nav h1", { opacity: 0, delay: .5, duration: .5, stagger: .15 })
-    tl.from("nav a", { y: -30, opacity: 0, duration: .5, stagger: .15 })
-    tl.from("nav button", { x: 50, opacity: 0 })
+    tl.from("nav", {
+        y: -100,
+        duration: .45,
+        delay: .5
+    })
+    tl.from("nav h1", {
+        opacity: 0,
+        delay: .3,
+        duration: .4,
+        stagger: .1
+    })
+    tl.from("nav a", {
+        y: -30,
+        opacity: 0,
+        duration: .5,
+        stagger: .15
+    })
+    tl.from("nav button", {
+        x: 50,
+        opacity: 0
+    })
+}
+const animate2 = () => {
+    var tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#section1",
+            scroller: "body",
+            start: "top 50%",
+            end: "top -5%",
+            scrub: 1,
+            toggleActions: "play pause resume reset"
+        }
+    })
+
+    tl.from("#info1 h2, #info1 .info1, #info1 .info2, #info1 .info3", {
+        opacity: 0,
+        x: -50,
+        stagger: .15
+    })
+}
+const animate3 = () => {
+    var tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#section2",
+            scroller: "body",
+            start: "top 50%",
+            end: "top -5%",
+            scrub: 1,
+            toggleActions: "play pause resume reset"
+        }
+    })
+
+    tl.from("#info2 h2, #info2 .info1, #info2 .info2, #info2 .info3", {
+        opacity: 0,
+        x: 50,
+        stagger: .15
+    })
+}
+const animate4 = () => {
+    var tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#section3",
+            scroller: "body",
+            start: "top 50%",
+            end: "top -5%",
+            scrub: 1,
+            toggleActions: "play pause resume reset"
+        }
+    })
+
+    tl.from("#info3 h2, #info3 .info1, #info3 .info2, #info3 .info3", {
+        opacity: 0,
+        x: -50,
+        stagger: .15
+    })
 }
 const buttonsHoverAnimation = () => {
     const buttons = gsap.utils.toArray(".btn");
@@ -33,12 +104,35 @@ const buttonsHoverAnimation = () => {
     btn.addEventListener("mouseleave", () => tl.reverse())
     btn2.addEventListener("mouseenter", () => { tl2.play(), tl3.play() })
     btn2.addEventListener("mouseleave", () => { tl2.reverse(), tl3.reverse() })
-    btn2.addEventListener("click", () => document.querySelector("#section1").scrollIntoView({ behavior: 'smooth'}))
+    btn2.addEventListener("click", () => {
+        gsap.to(window, {
+            duration: .1,
+            scrollTo: "#section1"
+        })
+    })
+
+    document.querySelectorAll("nav a").forEach((btn, index) => {
+        btn.addEventListener("click", () => {
+            gsap.to(window, {
+                duration: .1,
+                scrollTo: {
+                    y: "#section" + (index + 1)
+                }
+            });
+        });
+    });
 }
 
 const home = document.querySelector("#home")
-home.addEventListener("click", () => document.querySelector("body").scrollIntoView({ behavior: 'smooth' }))
-
+home.addEventListener("click", () => {
+    gsap.to(window, {
+        duration: .1,
+        scrollTo: "body",
+    })
+})
 
 animate1()
+animate2()
+animate3()
+animate4()
 buttonsHoverAnimation()

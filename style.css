@@ -32,6 +32,7 @@ nav {
     padding: 0 30px;
     position: sticky;
     top: 0;
+    z-index: 99;
     background-color: #904d1433;
     backdrop-filter: blur(5px);
 
@@ -75,7 +76,6 @@ nav {
 
 #main {
     height: 100vh;
-    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -122,28 +122,115 @@ nav {
 
 #section1 {
     height: 100vh;
-    width: 100vw;
     padding: 60px 30px;
-}
 
-.card {
-    height: 100%;
-    width: 100%;
+    & .card {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        gap: 100px;
 
-    & img {
-        width: 300px;
-        object-fit: contain;
+        & .infos {
+            display: flex;
+            flex-direction: column;
+            text-align: end;
+
+            & p {
+                font-size: medium;
+            }
+        }
+
+        & img {
+            width: 250px;
+            object-fit: contain;
+            position: sticky;
+            top: 0;
+        }
     }
 }
 
 #section2 {
     height: 100vh;
-    width: 100vw;
     padding: 60px 30px;
+
+    & .card {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 100px;
+
+        & .infos {
+            display: flex;
+            flex-direction: column;
+
+            & p {
+                font-size: medium;
+            }
+        }
+
+        & img {
+            width: 250px;
+            object-fit: contain;
+            position: sticky;
+            top: 0;
+        }
+    }
 }
 
 #section3 {
     height: 100vh;
-    width: 100vw;
     padding: 60px 30px;
+
+    & .card {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        gap: 100px;
+
+        & .infos {
+            display: flex;
+            flex-direction: column;
+            text-align: end;
+
+            & p {
+                font-size: medium;
+            }
+        }
+
+        & img {
+            width: 250px;
+            object-fit: contain;
+            position: sticky;
+            top: 0;
+        }
+    }
+}
+
+footer {
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--primary);
+    background-color: var(--secondary);
+
+    & h1 {
+        margin-bottom: 0;
+    }
+
+    & p {
+        margin-top: 5px;
+        margin-bottom: 50px;
+    }
+
+    & #icons i{
+        font-size: 1.3em;
+    }
 }
