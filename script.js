@@ -1,24 +1,20 @@
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
 const animate1 = () => {
     var tl = gsap.timeline()
 
-    tl.from("nav", {
-        y: -100,
-        duration: .45,
-        delay: .5
-    })
     tl.from("nav h1", {
-        opacity: 0,
-        delay: .3,
-        duration: .4,
-        stagger: .1
+        width: 0,
+        delay: .3
     })
-    tl.from("nav a", {
+    tl.from("nav .btn", {
         y: -30,
         opacity: 0,
         duration: .5,
-        stagger: .15
+        stagger: .1
     })
-    tl.from("nav button", {
+    tl.from("nav #btn", {
         x: 50,
         opacity: 0
     })
@@ -30,8 +26,7 @@ const animate2 = () => {
             scroller: "body",
             start: "top 50%",
             end: "top -5%",
-            scrub: 1,
-            toggleActions: "play pause resume reset"
+            scrub: 1
         }
     })
 
@@ -48,8 +43,7 @@ const animate3 = () => {
             scroller: "body",
             start: "top 50%",
             end: "top -5%",
-            scrub: 1,
-            toggleActions: "play pause resume reset"
+            scrub: 1
         }
     })
 
@@ -66,8 +60,7 @@ const animate4 = () => {
             scroller: "body",
             start: "top 50%",
             end: "top -5%",
-            scrub: 1,
-            toggleActions: "play pause resume reset"
+            scrub: 1
         }
     })
 
@@ -94,7 +87,7 @@ const buttonsHoverAnimation = () => {
         item.addEventListener("mouseleave", () => tl.reverse())
     });
 
-    tl.to("nav button", { backgroundColor: "transparent", color: "#fdca6f", duration: .3 })
+    tl.to("nav #btn", { backgroundColor: "transparent", color: "#fdca6f", duration: .3 })
     tl2.to(".parts #btn2", { backgroundColor: "transparent", color: "#fdca6f" })
     tl3.to("#icon", { duration: .2, yPercent: -150, ease: "power2.in" });
     tl3.set("#icon", { yPercent: 150 });

@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,12 +19,10 @@
     <nav>
         <h1 id="home"><i class="ri-folder-3-line"></i> E-Portfolio</h1>
         <div class="buttons">
-            <a class="btn" href="#section1"><span>About us</span></a>
-            <a class="btn" href="#section2"><span>Services</span></a>
-            <a class="btn" href="#section3"><span>Use Cases</span></a>
-            <a class="btn" href="#pricing"><span>Pricing</span></a>
-            <a class="btn" href="#blog"><span>Blog</span></a>
-            <button id="btn">Request a quote</button>
+            <a class="btn" href="#section1"><span>Section 1</span></a>
+            <a class="btn" href="#section2"><span>Section 2</span></a>
+            <a class="btn" href="#section3"><span>Section 3</span></a>
+            <a id="btn" href="#section4">Request a quote</a>
         </div>
     </nav>
     <div id="main">
@@ -32,8 +36,9 @@
     </div>
     <div id="section1">
         <h1>Section 1</h1>
-        <div class="card">
-            <img src="KidlatTahimik.jpg" alt="">
+        <div class="infoCard">
+            <img src="KidlatTahimik.jpg" alt="" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="
+            Born: October 3, 1942 in Baguio, Benguet, Commonwealth of the">
             <div id="info1" class="infos">
                 <h2>Kidlat Tahimik (Eric Oteyza de Guia)</h2>
                 <p class="info1">
@@ -63,7 +68,7 @@
     </div>
     <div id="section2">
         <h1>Section 2</h1>
-        <div class="card">
+        <div class="infoCard">
             <img src="RyanCayabyab.jpg" alt="">
             <div id="info2" class="infos">
                 <h2>Ryan Cayabyab</h2>
@@ -96,7 +101,7 @@
     </div>
     <div id="section3">
         <h1>Section 3</h1>
-        <div class="card">
+        <div class="infoCard">
             <img src="HajaAminaAppi.jpg" alt="">
             <div id="info3" class="infos">
                 <h2>Haja Amina Appi</h2>
@@ -125,7 +130,7 @@
             </div>
         </div>
     </div>
-    <footer>
+    <footer id="section4">
         <h1>Contact Us</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
             magna aliqua.</p>

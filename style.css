@@ -38,8 +38,14 @@ nav {
 
     & h1 {
         font-size: 1.7em;
-        margin: 25px;
+        margin: 15px;
         cursor: pointer;
+        white-space: nowrap;
+        overflow: hidden;
+
+        &:hover {
+            filter: brightness(.8);
+        }
     }
 
     & .buttons {
@@ -62,8 +68,8 @@ nav {
             }
         }
 
-        & button {
-            padding: 10px;
+        & #btn {
+            padding: 6px;
             font-size: 1em;
             border-radius: 15px;
             cursor: pointer;
@@ -90,11 +96,12 @@ nav {
 
         & h1 {
             font-size: 4.5em;
+            margin-bottom: 20px;
         }
 
         & #btn2 {
             padding: 10px;
-            font-size: 1.3em;
+            font-size: 1em;
             border-radius: 15px;
             cursor: pointer;
             color: var(--primary);
@@ -124,18 +131,20 @@ nav {
     height: 100vh;
     padding: 60px 30px;
 
-    & .card {
-        height: 100%;
+    & .infoCard {
+        height: max-content;
         width: 100%;
         display: flex;
         flex-direction: row-reverse;
         align-items: flex-start;
-        gap: 100px;
+        gap: 50px;
 
         & .infos {
             display: flex;
             flex-direction: column;
             text-align: end;
+            position: sticky;
+            top: 0;
 
             & p {
                 font-size: medium;
@@ -145,8 +154,6 @@ nav {
         & img {
             width: 250px;
             object-fit: contain;
-            position: sticky;
-            top: 0;
         }
     }
 }
@@ -155,17 +162,19 @@ nav {
     height: 100vh;
     padding: 60px 30px;
 
-    & .card {
-        height: 100%;
+    & .infoCard {
+        height: max-content;
         width: 100%;
         display: flex;
         flex-direction: row;
         align-items: flex-start;
-        gap: 100px;
+        gap: 50px;
 
         & .infos {
             display: flex;
             flex-direction: column;
+            position: sticky;
+            top: 0;
 
             & p {
                 font-size: medium;
@@ -175,8 +184,6 @@ nav {
         & img {
             width: 250px;
             object-fit: contain;
-            position: sticky;
-            top: 0;
         }
     }
 }
@@ -185,18 +192,20 @@ nav {
     height: 100vh;
     padding: 60px 30px;
 
-    & .card {
-        height: 100%;
+    & .infoCard {
+        height: max-content;
         width: 100%;
         display: flex;
         flex-direction: row-reverse;
         align-items: flex-start;
-        gap: 100px;
+        gap: 50px;
 
         & .infos {
             display: flex;
             flex-direction: column;
             text-align: end;
+            position: sticky;
+            top: 0;
 
             & p {
                 font-size: medium;
@@ -206,8 +215,6 @@ nav {
         & img {
             width: 250px;
             object-fit: contain;
-            position: sticky;
-            top: 0;
         }
     }
 }
@@ -230,7 +237,7 @@ footer {
         margin-bottom: 50px;
     }
 
-    & #icons i{
+    & #icons i {
         font-size: 1.3em;
     }
 }
