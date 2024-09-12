@@ -61,7 +61,7 @@ nav {
             text-decoration: none;
             color: var(--secondary);
             outline: none;
-            border-bottom: 1px solid transparent;
+            border: none;
 
             & span {
                 padding: 10px;
