@@ -8,7 +8,7 @@ const animate1 = () => {
         width: 0,
         delay: .3
     })
-    tl.from("nav .btn", {
+    tl.from("nav .button", {
         y: -30,
         opacity: 0,
         duration: .5,
@@ -71,7 +71,7 @@ const animate4 = () => {
     })
 }
 const buttonsHoverAnimation = () => {
-    const buttons = gsap.utils.toArray(".btn");
+    const buttons = gsap.utils.toArray(".button");
     const btn = document.querySelector("#btn")
     const btn2 = document.querySelector("#btn2")
 
