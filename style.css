@@ -25,6 +25,10 @@ body {
     color: var(--secondary);
 }
 
+.scrollDisabled {
+    overflow: hidden;
+}
+
 #intro {
     position: absolute;
     height: 100vh;
@@ -65,7 +69,7 @@ nav {
     top: 0;
     z-index: 1;
     background-color: #904d1433;
-    backdrop-filter: blur(50px);
+    backdrop-filter: blur(5px);
 
     & h1 {
         font-size: 1.7em;
@@ -182,7 +186,7 @@ nav {
         flex-direction: column;
 
         & h1 {
-            font-size: clamp(2rem, 1.2857rem + 3.5714vw, 4.5rem);
+            font-size: clamp(1.5rem, 0.6429rem + 4.2857vw, 4.5rem);
             margin-bottom: 20px;
         }
 
@@ -268,17 +272,16 @@ nav {
             top: 0;
 
             & h2 {
-                font-size: clamp(1rem, 0.6286rem + 1.8571vw, 2.3rem);
+                font-size: clamp(1.5rem, 1.2714rem + 1.1429vw, 2.3rem);
                 margin-bottom: 20px;
             }
 
             & p {
-                font-size: clamp(0.6rem, 0.4857rem + 0.5714vw, 1rem);
+                font-size: clamp(0.65rem, 0.55rem + 0.5vw, 1rem);
             }
         }
     }
 }
-
 #section2 {
     height: 100vh;
     padding: 60px 30px;
@@ -333,12 +336,12 @@ nav {
             top: 0;
 
             & h2 {
-                font-size: clamp(1rem, 0.6286rem + 1.8571vw, 2.3rem);
+                font-size: clamp(1.5rem, 1.2714rem + 1.1429vw, 2.3rem);
                 margin-bottom: 20px;
             }
 
             & p {
-                font-size: clamp(0.6rem, 0.4857rem + 0.5714vw, 1rem);
+                font-size: clamp(0.65rem, 0.55rem + 0.5vw, 1rem);
 
             }
         }
@@ -405,12 +408,12 @@ nav {
             top: 0;
 
             & h2 {
-                font-size: clamp(1rem, 0.6286rem + 1.8571vw, 2.3rem);
+                font-size: clamp(1.5rem, 1.2714rem + 1.1429vw, 2.3rem);
                 margin-bottom: 20px;
             }
 
             & p {
-                font-size: clamp(0.6rem, 0.4857rem + 0.5714vw, 1rem);
+                font-size: clamp(0.65rem, 0.55rem + 0.5vw, 1rem);
             }
         }
 
@@ -432,16 +435,140 @@ footer {
     background-color: var(--secondary);
 
     & h2 {
-        margin-bottom: 0;
+        margin-bottom: 10px;
     }
 
     & p {
         text-align: center;
-        margin-bottom: 50px;
-        font-size: clamp(0.6rem, 0.4857rem + 0.5714vw, 1rem);
+        margin-bottom: 30px;
     }
 
-    & #icons i {
-        font-size: 1.3em;
+    & .content {
+        margin-top: 50px;
+
+        & p {
+            margin: 0;
+        }
+    }
+
+    & a {
+        text-decoration: none;
+        color: var(--primary);
+    }
+
+    & #icons {
+        margin-bottom: 50px;
+
+        & i {
+            font-size: 1.3em;
+        }
+    }
+
+    ul {
+        & h5 {
+            text-align: center;
+        }
+
+        & li {
+            list-style: none;
+        }
+    }
+}
+
+@media all and (max-width: 425px) {
+    #section1 {
+        margin-bottom: 250px;
+
+        & h1 {
+            text-align: center;
+        }
+
+        & .infoCard {
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            & .infos {
+                order: 2;
+
+                & h2 {
+                    text-align: center;
+                }
+
+                & p {
+                    text-align: center;
+                }
+            }
+
+            & #imageContainer1 {
+                order: 1;
+            }
+        }
+    }
+
+    #section2 {
+        margin-bottom: 250px;
+
+        & h1 {
+            text-align: center;
+        }
+
+        & .infoCard {
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            & .infos {
+                order: 2;
+
+                & h2 {
+                    text-align: center;
+                }
+
+                & p {
+                    text-align: center;
+                }
+            }
+
+            & #imageContainer1 {
+                order: 1;
+            }
+        }
+    }
+
+    #section3 {
+        margin-bottom: 250px;
+
+        & h1 {
+            text-align: center;
+        }
+
+        & .infoCard {
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            & .infos {
+                order: 2;
+
+                & h2 {
+                    text-align: center;
+                }
+
+                & p {
+                    text-align: center;
+                }
+            }
+
+            & #imageContainer1 {
+                order: 1;
+            }
+        }
     }
 }

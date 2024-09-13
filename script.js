@@ -1,6 +1,20 @@
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
+const scrolling = () => {
+    const body = document.querySelector("body")
+
+    body.className = "scrollDisabled"
+    let count = 10
+
+    const timer = setInterval(() => {
+        count--
+        if (count == 0) {
+            clearInterval(timer);
+            body.className = "scrollEnabled"
+        }
+    }, 500);
+}
 const introAnimation = () => {
     var tl = gsap.timeline()
 
@@ -24,10 +38,10 @@ const introAnimation = () => {
         opacity: 0,
         stagger: .09
     })
-    let count = 2
+    let count2 = 2
     const timer = setInterval(() => {
-        count--
-        if (count == 0) {
+        count2--
+        if (count2 == 0) {
             clearInterval(timer);
             tl.to("#intro1 .a", {
                 y: -100,
@@ -378,6 +392,7 @@ const burgerMenu = () => {
         }
     });
 };
+scrolling()
 introAnimation()
 navAnimations()
 
