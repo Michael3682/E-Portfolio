@@ -1,12 +1,65 @@
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
+const introAnimation = () => {
+    var tl = gsap.timeline()
+
+    const breakText = () => {
+        var h1 = document.querySelector("#intro1")
+        var h1Text = h1.textContent
+        var splittedText = h1Text.split("")
+        var clutter = ""
+
+        splittedText.forEach((e, i) => {
+            if (i < 8) {
+                clutter += `<span class="a">${e}</span>`
+            }
+        })
+
+        h1.innerHTML = clutter
+    }
+    breakText()
+    tl.from("#intro1 .a", {
+        x: -50,
+        opacity: 0,
+        stagger: .09
+    })
+    let count = 2
+    const timer = setInterval(() => {
+        count--
+        if (count == 0) {
+            clearInterval(timer);
+            tl.to("#intro1 .a", {
+                y: -100,
+                opacity: 0,
+                stagger: .09
+            })
+            tl.to("#intro2", {
+                y: -70,
+                opacity: 1,
+                stagger: .09
+            })
+            tl.to("#intro2 span", {
+                x: -70,
+                opacity: 1,
+                stagger: .09
+            })
+            tl.to("#intro", {
+                y: -1000,
+                delay: .5,
+                duration: 1.3
+            })
+
+        }
+    }, 500);
+
+}
 const navAnimations = () => {
     var tl = gsap.timeline()
 
     tl.from("nav h1", {
         width: 0,
-        delay: .3
+        delay: 4.5
     })
     tl.from("nav .button", {
         y: -30,
@@ -325,7 +378,7 @@ const burgerMenu = () => {
         }
     });
 };
-
+introAnimation()
 navAnimations()
 
 Section1TextAnimation()
