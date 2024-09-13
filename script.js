@@ -25,7 +25,7 @@ const Section1TextAnimation = () => {
             trigger: "#section1",
             scroller: "body",
             start: "top 50%",
-            end: "top -5%",
+            end: "top -3%",
             scrub: 1
         }
     })
@@ -42,7 +42,7 @@ const Section2TextAnimation = () => {
             trigger: "#section2",
             scroller: "body",
             start: "top 50%",
-            end: "top -5%",
+            end: "top -3%",
             scrub: 1
         }
     })
@@ -59,7 +59,7 @@ const Section3TextAnimation = () => {
             trigger: "#section3",
             scroller: "body",
             start: "top 50%",
-            end: "top -5%",
+            end: "top -3%",
             scrub: 1
         }
     })
@@ -280,6 +280,51 @@ const Section3ImageAnimations = () => {
     }
     animateOverlay()
 }
+const burgerMenu = () => {
+    const menu = document.querySelector(".menuButton");
+    const icon = document.querySelector("#icon");
+    const buttons = document.querySelector(".buttons");
+
+    const SMALL_SCREEN_QUERY = "(max-width: 879px)";
+
+    const updateUI = () => {
+        const isSmallScreen = window.matchMedia(SMALL_SCREEN_QUERY).matches;
+
+        if (isSmallScreen) {
+            menu.hidden = false;
+            buttons.style.display = 'none';
+            buttons.className = 'buttons2';
+            icon.className = 'bi bi-grid';
+        } else {
+            menu.hidden = true;
+            buttons.style.display = 'flex';
+            buttons.className = 'buttons';
+            icon.className = 'bi bi-grid';
+        }
+    };
+
+    updateUI();
+
+    window.addEventListener("resize", updateUI);
+
+    menu.addEventListener("click", () => {
+        if (buttons.style.display === 'none') {
+            buttons.style.display = 'flex';
+            icon.className = 'bi bi-grid-fill';
+        } else {
+            // let count = 3
+            // const timer = setInterval(() => {
+            //     count--
+            //     if (count == 0) {
+            //         clearInterval(timer);
+            //         buttons.style.display = 'none';
+            //     }
+            // }, 500);
+            buttons.style.display = 'none';
+            icon.className = 'bi bi-grid';
+        }
+    });
+};
 
 navAnimations()
 
@@ -294,3 +339,4 @@ Section3ImageAnimations()
 
 scrollToHome()
 buttonsHoverAnimation()
+burgerMenu()

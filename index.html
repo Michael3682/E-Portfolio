@@ -11,19 +11,21 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <link rel="stylesheet" href="style.css">
-</head>
+</head> 
 
 <body>
     <nav>
         <h1 id="home"><i class="ri-folder-3-line"></i> E-Portfolio</h1>
-        <div class="buttons">
+        <div id="buttons" class="buttons">
             <a class="button" href="#section1"><span>Kidlat Tahimik</span></a>
             <a class="button" href="#section2"><span>Ryan Cayabyab</span></a>
             <a class="button" href="#section3"><span>Haja Amani Appi</span></a>
             <a id="btn" href="#section4">Contact Us</a>
         </div>
+        <div class="menuButton"><i id="icon" class="bi bi-grid"></i></div>
     </nav>
     <div id="main">
         <div class="parts">
@@ -37,6 +39,18 @@
     <div id="section1">
         <h1>Artist 1</h1>
         <div class="infoCard">
+            <div id="info1" class="infos">
+                <h2>Kidlat Tahimik (Eric Oteyza de Guia)</h2>
+                <p class="info1">
+                    Tahimik was born 1942 in Baguio, a colonial hill station created by the Americans after they too the
+                    Philippines away from Spain in 1898. He was initially named Eric Oteyza de Guia before he took the
+                    nom de plume Kidlat Tahimik, which in his native-tongue Tagalog means “silent lightning”.
+                </p>
+                <p class="info2">Kidlat Tahimik, born Eric Oteyza de Guia, is an independent filmmaker who primarily
+                    advocates for indigenous culture amidst neocolonialism. He has been dubbed the “Father of Philippine
+                    Indie Cinema” and was conferred the prestigious Order of National Artist in the field of film and
+                    broadcast arts in 2018.</p>
+            </div>
             <div id="imageContainer1" class="closed" data-bs-toggle="tooltip" data-bs-title="Click Me!">
                 <img id="image1" src="KidlatTahimik.jpg" alt="">
                 <div class="imageOverlay"></div>
@@ -50,22 +64,6 @@
                     <p><b>Award</b>: National Artist of the Philippines</p>
                 </div>
             </div>
-            <div id="info1" class="infos">
-                <h2>Kidlat Tahimik (Eric Oteyza de Guia)</h2>
-                <p class="info1">
-                    Tahimik was born 1942 in Baguio, a colonial hill station created by the Americans after they
-                    took
-                    the Philippines away from Spain in 1898. He was initially named Eric Oteyza de Guia before he
-                    took
-                    the nom de plume Kidlat Tahimik, which in his native-tongue Tagalog means “silent lightning”.
-                </p>
-                <p class="info2">Kidlat Tahimik, born Eric Oteyza de Guia, is an independent filmmaker who primarily
-                    advocates for
-                    indigenous culture amidst neocolonialism. He
-                    has been dubbed the “Father of Philippine Indie Cinema” and was conferred the prestigious Order
-                    of
-                    National Artist in the field of film and broadcast arts in 2018.</p>
-            </div>
         </div>
     </div>
     <div id="section2">
@@ -78,7 +76,8 @@
                     <p><b>Born</b>: May 4, 1954 (age 70 years), Manila</p>
                     <p><b>Spouse</b>: Emmy Cayabyab</p>
                     <p><b>Children</b>: Antonio Maria Cayabyab, Krina Cayabyab</p>
-                    <p><b>Education</b>: University of the Philippines College of Music, University of the Philippines Diliman</p>
+                    <p><b>Education</b>: University of the Philippines College of Music, University of the Philippines
+                        Diliman</p>
                     <p><b>Parents</b>: Celerina Venson Pujante, Alberto Austria Cayabyab</p>
                     <p><b>Award</b>: Awit Award for Song of the Year</p>
                 </div>
@@ -86,68 +85,47 @@
             <div id="info2" class="infos">
                 <h2>Ryan Cayabyab (Raymundo Cipriano Pujante Cayabyab)</h2>
                 <p class="info1">
-                    Ryan Cayabyab is the most accomplished composer, arranger, and musical director in the
-                    Philippine
-                    music
-                    industry since it bloomed beginning in the 1970s. His skillful and versatile musical style spans
-                    a
-                    wide range of genres from conservatory or art compositions such as concert religious music,
-                    symphonic
-                    work, art song, opera, and concerto to mainstream popular idioms in the music industry and in
-                    live
-                    contemporary shows. Being very visible in mainstream media, Cayabyab is a household name. His
-                    compositions reflect a perspective of music that extols the exuberance of life and human
-                    happiness,
-                    thus
-                    capturing the essence of the Filipino soul. </p>
-                <p class="info2">He is Famous for composing the Da Coconut Nut Song performed by his Smokey Mountain
-                    band,
-                    Cayabyab's
-                    current project includes the Ryan Cayabyab Singers (RCS), a group of seven young adult singers
-                    comparable to Smokey Mountain in the early 1990s. After FreemantleMedia decided not to renew the
-                    Philippine Idol franchise, Cayabyab transferred to rival show Pinoy Dream Academy, replacing Jim
-                    Paredes as the show's headmaster. PDA 2 started on June 14, 2008. He also became the chairman of
-                    the
-                    board of judges for GMA Network's musical-reality show To The Top.</p>
+                    Ryan Cayabyab is a Filipino musician, composer and conductor regarded as one of the pillars and
+                    icons of Original Pilipino Music (OPM). He was the Executive and Artistic Director for several years
+                    for the defunct San Miguel Foundation for the Performing Arts. He was named National Artist of the
+                    Philippines for Music in 2018.</p>
+                <p class="info2">Famous for composing the Da Coconut Nut Song performed by his Smokey Mountain band,
+                    Cayabyab's current project includes the Ryan Cayabyab Singers (RCS), a group of seven young adult
+                    singers comparable to Smokey Mountain in the early 1990s. After FreemantleMedia decided not to renew
+                    the Philippine Idol franchise, Cayabyab transferred to rival show Pinoy Dream Academy, replacing Jim
+                    Paredes as the show's headmaster.</p>
             </div>
         </div>
     </div>
     <div id="section3">
         <h1>Artist 3</h1>
         <div class="infoCard">
+            <div id="info3" class="infos">
+                <h2>Haja Amina Appi</h2>
+                <p class="info1">Haja Amina Appi is a Filipino master mat weaver and teacher from the Sama indigenous
+                    people of Ungos Matata, Tandubas, Tawi-Tawi. She was credited with creating colorful pandan mats
+                    with complex geometric patterns. Her creations were acclaimed for their precise sense of design,
+                    proportion and symmetry, and sensitivity to color. She was given the National Living Treasures Award
+                    in 2004 by the Philippines through the National Commission for Culture and the Arts.</p>
+                <p class="info2">Haja Appi was known for creating finely woven mats with highly intricate designs. An
+                    older tradition produced Sama mats in plain white. However, Haja Appi experimented with dyes for her
+                    designs, mixing her own dyes to create striking designs for her mats.</p>
+                </p>
+            </div>
             <div id="imageContainer3" class="closed" data-bs-toggle="tooltip" data-bs-title="Click Me!">
                 <img id="image3" src="HajaAminaAppi.jpg" alt="">
                 <div class="imageOverlay"></div>
                 <div class="imageInfo3">
                     <p><b>Born</b>: June 25, 1925</p>
                     <p><b>Known for</b>: Textile</p>
-                    <p><b>Style</b>: 	Sama traditional weaving</p>
+                    <p><b>Style</b>: Sama traditional weaving</p>
                     <p><b>Award</b>: National Living Treasure Award 2004</p>
                 </div>
-            </div>
-            <div id="info3" class="infos">
-                <h2>Haja Amina Appi</h2>
-                <p class="info1">Haja Amina Appi is a Filipino master mat weaver and teacher from the Sama
-                    indigenous people of Ungos
-                    Matata, Tandubas, Tawi-Tawi. She was credited with creating colorful pandan mats with complex
-                    geometric patterns. Her creations were acclaimed for their precise sense of design, proportion
-                    and
-                    symmetry, and sensitivity to color.
-
-                    She was given the National Living Treasures Award in 2004 by the Philippines through the
-                    National
-                    Commission for Culture and the Arts.</p>
-                <p class="info2">Haja Appi was known for creating finely woven mats with highly intricate designs.
-                    An older tradition
-                    produced Sama mats in plain white. However, Haja Appi experimented with dyes for her designs,
-                    mixing
-                    her own dyes to create striking designs for her mats.</p>
-                </p>
             </div>
         </div>
     </div>
     <footer id="section4">
-        <h1>Contact Us</h1>
+        <h2>Contact Us</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
             magna aliqua.</p>
         <div id="icons">
