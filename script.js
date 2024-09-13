@@ -1,7 +1,7 @@
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
-const animate1 = () => {
+const navAnimations = () => {
     var tl = gsap.timeline()
 
     tl.from("nav h1", {
@@ -19,7 +19,7 @@ const animate1 = () => {
         opacity: 0
     })
 }
-const animate2 = () => {
+const Section1TextAnimation = () => {
     var tl = gsap.timeline({
         scrollTrigger: {
             trigger: "#section1",
@@ -30,13 +30,13 @@ const animate2 = () => {
         }
     })
 
-    tl.from("#info1 h2, #info1 .info1, #info1 .info2, #info1 .info3", {
+    tl.from("#info1 h2, #info1 .info1, #info1 .info2", {
         opacity: 0,
         x: -50,
         stagger: .15
     })
 }
-const animate3 = () => {
+const Section2TextAnimation = () => {
     var tl = gsap.timeline({
         scrollTrigger: {
             trigger: "#section2",
@@ -47,13 +47,13 @@ const animate3 = () => {
         }
     })
 
-    tl.from("#info2 h2, #info2 .info1, #info2 .info2, #info2 .info3", {
+    tl.from("#info2 h2, #info2 .info1, #info2 .info2", {
         opacity: 0,
         x: 50,
         stagger: .15
     })
 }
-const animate4 = () => {
+const Section3TextAnimation = () => {
     var tl = gsap.timeline({
         scrollTrigger: {
             trigger: "#section3",
@@ -64,7 +64,7 @@ const animate4 = () => {
         }
     })
 
-    tl.from("#info3 h2, #info3 .info1, #info3 .info2, #info3 .info3", {
+    tl.from("#info3 h2, #info3 .info1, #info3 .info2", {
         opacity: 0,
         x: -50,
         stagger: .15
@@ -115,17 +115,182 @@ const buttonsHoverAnimation = () => {
         });
     });
 }
-
-const home = document.querySelector("#home")
-home.addEventListener("click", () => {
-    gsap.to(window, {
-        duration: .1,
-        scrollTo: "body",
+const scrollToHome = () => {
+    const home = document.querySelector("#home")
+    home.addEventListener("click", () => {
+        gsap.to(window, {
+            duration: .1,
+            scrollTo: "body",
+        })
     })
-})
+}
+const Section1ImageAnimations = () => {
+    const imgContainer = document.querySelector("#imageContainer1")
+    var tl = gsap.timeline()
 
-animate1()
-animate2()
-animate3()
-animate4()
+    tl.from(".imageInfo1 p", {
+        x: 100,
+        opacity: 0,
+        stagger: .1,
+        duration: .25,
+    })
+
+    tl.pause()
+
+    imgContainer.addEventListener("click", () => {
+        if (imgContainer.className == 'closed') {
+            tl.play()
+            imgContainer.className = 'open'
+        }
+        else if (imgContainer.className == 'open') {
+            tl.reverse()
+            imgContainer.className = 'closed'
+        }
+    })
+
+    const animateOverlay = () => {
+        const imgContainer = document.querySelector("#imageContainer1")
+
+        var tl = gsap.timeline()
+
+        tl.to("#image1", {
+            'webkitFilter': 'blur(1.5px)',
+            duration: .1
+        })
+        tl.to(".imageInfo1", {
+            backgroundColor: 'rgba(0, 0, 0, .5)',
+            border: '1px solid #8f4c12'
+        })
+
+        tl.pause()
+
+        imgContainer.addEventListener("click", () => {
+            if (imgContainer.className == 'closed') {
+                tl.reverse()
+            }
+            else if (imgContainer.className == 'open') {
+                tl.play()
+            }
+        })
+
+    }
+    animateOverlay()
+}
+const Section2ImageAnimations = () => {
+    const imgContainer = document.querySelector("#imageContainer2")
+    var tl = gsap.timeline()
+
+    tl.from(".imageInfo2 p", {
+        x: -100,
+        opacity: 0,
+        stagger: .1,
+        duration: .25,
+    })
+
+    tl.pause()
+
+    imgContainer.addEventListener("click", () => {
+        if (imgContainer.className == 'closed') {
+            tl.play()
+            imgContainer.className = 'open'
+        }
+        else if (imgContainer.className == 'open') {
+            tl.reverse()
+            imgContainer.className = 'closed'
+        }
+    })
+
+    const animateOverlay = () => {
+        const imgContainer = document.querySelector("#imageContainer2")
+
+        var tl = gsap.timeline()
+
+        tl.to("#image2", {
+            'webkitFilter': 'blur(1.5px)',
+            duration: .1
+        })
+        tl.to(".imageInfo2", {
+            backgroundColor: 'rgba(0, 0, 0, .5)',
+            border: '1px solid #8f4c12'
+        })
+
+        tl.pause()
+
+        imgContainer.addEventListener("click", () => {
+            if (imgContainer.className == 'closed') {
+                tl.reverse()
+            }
+            else if (imgContainer.className == 'open') {
+                tl.play()
+            }
+        })
+
+    }
+    animateOverlay()
+}
+const Section3ImageAnimations = () => {
+    const imgContainer = document.querySelector("#imageContainer3")
+    var tl = gsap.timeline()
+
+    tl.from(".imageInfo3 p", {
+        x: 100,
+        opacity: 0,
+        stagger: .1,
+        duration: .25,
+    })
+
+    tl.pause()
+
+    imgContainer.addEventListener("click", () => {
+        if (imgContainer.className == 'closed') {
+            tl.play()
+            imgContainer.className = 'open'
+        }
+        else if (imgContainer.className == 'open') {
+            tl.reverse()
+            imgContainer.className = 'closed'
+        }
+    })
+
+    const animateOverlay = () => {
+        const imgContainer = document.querySelector("#imageContainer3")
+
+        var tl = gsap.timeline()
+
+        tl.to("#image3", {
+            'webkitFilter': 'blur(1.5px)',
+            duration: .1
+        })
+        tl.to(".imageInfo3", {
+            backgroundColor: 'rgba(0, 0, 0, .5)',
+            border: '1px solid #8f4c12'
+        })
+
+        tl.pause()
+
+        imgContainer.addEventListener("click", () => {
+            if (imgContainer.className == 'closed') {
+                tl.reverse()
+            }
+            else if (imgContainer.className == 'open') {
+                tl.play()
+            }
+        })
+
+    }
+    animateOverlay()
+}
+
+navAnimations()
+
+Section1TextAnimation()
+Section1ImageAnimations()
+
+Section2TextAnimation()
+Section2ImageAnimations()
+
+Section3TextAnimation()
+Section3ImageAnimations()
+
+scrollToHome()
 buttonsHoverAnimation()
