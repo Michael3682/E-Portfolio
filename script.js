@@ -392,6 +392,7 @@ const burgerMenu = () => {
         }
     });
 };
+
 scrolling()
 introAnimation()
 navAnimations()

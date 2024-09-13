@@ -282,6 +282,7 @@ nav {
         }
     }
 }
+
 #section2 {
     height: 100vh;
     padding: 60px 30px;
@@ -420,6 +421,27 @@ nav {
         & img {
             width: 250px;
             object-fit: contain;
+        }
+    }
+}
+
+.button5 {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+
+    & #button5 {
+        padding: 6px;
+        font-size: 1em;
+        cursor: pointer;
+        border: none;
+        border-bottom: 1px solid #8f4c1299;
+        background-color: transparent;
+        color: var(--secondary);
+
+        & a {
+            text-decoration: none;
+            color: var(--secondary);
         }
     }
 }
@@ -570,16 +592,5 @@ footer {
                 order: 1;
             }
         }
-    }
-}
-@media all and (max-width: 320px) {
-    #section1 {
-        margin-bottom: 300px;
-    }
-    #section2 {
-        margin-bottom: 300px;
-    }
-    #section3 {
-        margin-bottom: 300px;
     }
 }
